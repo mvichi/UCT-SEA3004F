@@ -1,0 +1,4571 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass beamer
+\begin_preamble
+\usetheme{CambridgeUS}
+%\usecolortheme{dove}
+\hypersetup{pdfpagemode=None}
+\usepackage{tikz}
+\usepackage{color}
+\usepackage{listings}
+
+% This allows to change color of symbols in math
+\newcommand*{\mathcolor}{}
+\def\mathcolor#1#{\mathcoloraux{#1}}
+\newcommand*{\mathcoloraux}[3]{%
+  \protect\leavevmode
+  \begingroup
+    \color#1{#2}#3%
+  \endgroup
+}
+\end_preamble
+\options aspectratio=169
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "lmodern" "default"
+\font_sans "lmss" "default"
+\font_typewriter "lmtt" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\branch Deleted
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation skip
+\defskip medskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+M1 
+\end_layout
+
+\end_inset
+
+Mathematical and computational methods for GFD
+\end_layout
+
+\begin_layout Author
+Module 1
+\end_layout
+
+\begin_layout Institute
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+UCT
+\end_layout
+
+\end_inset
+
+Department of Oceanography
+\end_layout
+
+\begin_layout Date
+SEA3004F
+\end_layout
+
+\begin_layout Section*
+Outlines
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Outline
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Introduction to Geophysical Fluid Dynamics
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Meet Prof George Philander
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout ColumnsTopAligned
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+4cm
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ../figures/M1/philander.png
+	lyxscale 50
+	width 4cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\emph on
+… my story— disadvantaged in South Africa, privileged in America—will interest
+ readers … 
+\end_layout
+
+\begin_layout Column
+8cm
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+The “time and chance” that have happened to me personally over the past
+ few decades may interest a few young Africans, but they, unfortunately,
+ are not avid readers of Annual Reviews....
+\end_layout
+
+\begin_layout Itemize
+continue on: 
+\series bold
+“
+\bar under
+
+\begin_inset CommandInset href
+LatexCommand href
+name "Where Are You From? Why Are You Here? ..."
+target "https://www.researchgate.net/publication/228653879_Where_Are_You_From_Why_Are_You_Here_An_African_Perspective_on_Global_Warming"
+literal "false"
+
+\end_inset
+
+
+\bar default
+“
+\series default
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+El Ni
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+~n
+\end_layout
+
+\end_inset
+
+o and La Ni
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+~n
+\end_layout
+
+\end_inset
+
+a
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+6cm
+\end_layout
+
+\begin_layout Standard
+
+\size tiny
+\emph on
+In the year 1891, Señor Dr.
+ Luis Carranza, President of the Lima Geographical Society, contributed
+ a small article to the Bulletin of that Society, calling attention to the
+ fact that a counter-current flowing from north to south had been observed
+ between the ports of Paita and Pacasmayo.
+ The Paita sailors, who frequently navigate along the coast in small craft,
+ either to the north or the south of that port, name this counter-current
+ the current of “El Niño” (the Child Jesus) because it has been observed
+ to appear immediately after Christmas.
+ As this counter-current has been noticed on different occasions, and its
+ appearance along the Peruvian coast has been concurrent with rains in latitudes
+ where it seldom if ever rains to any great extent, I wish, on the present
+ occasion, to call the attention of the distinguished geographers here assembled
+ to this phenomenon, which exercises, undoubtedly, a very great influence
+ over the climatic conditions of that part of the world.
+\end_layout
+
+\begin_layout Column
+6cm
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ../figures/M1/philander_book.png
+	lyxscale 40
+	width 6cm
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+The 
+\begin_inset Quotes eld
+\end_inset
+
+normal
+\begin_inset Quotes erd
+\end_inset
+
+ state...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename ../figures/M1/elnino_normal.png
+	lyxscale 30
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+...
+ would persist if the equatorial ocean did not respond to sudden changes
+ in the wind, through the development of large-scale propagating waves called
+ 
+\series bold
+Rossby
+\series default
+ and 
+\series bold
+Kelvin
+\series default
+ 
+\series bold
+waves
+\series default
+ (more of this in Module 6).
+ These waves are 
+\series bold
+solutions
+\series default
+ of the shallow water equations, a special form of the equations of 
+\series bold
+geophysical fluid dynamics
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Mathematics, scientific computing and ocean sciences
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+If you are a student of Science in the 21st century and you do not use mathemati
+cal and computational tools, then you’re not doing science! (Glover et al.,
+ 2011)
+\end_layout
+
+\begin_layout Itemize
+Natural sciences have changed.
+ We have moved from a 
+\begin_inset Flex Emphasize
+status open
+
+\begin_layout Plain Layout
+descriptive
+\end_layout
+
+\end_inset
+
+ era to a 
+\emph on
+
+\begin_inset Flex Emphasize
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+diagnostic and prognostic
+\end_layout
+
+\end_inset
+
+
+\emph default
+ era, where the quantitative knowledge of functions and processes in natural
+ systems is necessary to quantify the impacts of humans and on the future
+ availability of resources
+\end_layout
+
+\begin_layout Itemize
+From weather forecast, to environmental predictions and climate projections,
+ there is a need for 
+\series bold
+predictive models 
+\series default
+based on quantitative understanding of processes
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Mathematics and oceanography
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+
+\size scriptsize
+This text has been rearranged from Cipra and Socha, Mathematics and the
+ ocean, 2001 (available in the course resources)
+\size default
+ 
+\end_layout
+
+\begin_layout Itemize
+Our understanding of the ocean has become increasingly scientific.
+ The observations of mariners throughout the ages have been augmented by
+ detailed measurements of water temperature and salinity, current velocity,
+ exchange of gas at the air-sea interface and spatial-temporal distributions
+ of marine life forms
+\end_layout
+
+\begin_layout Itemize
+Mathematics is the “salty language” of modern oceanography because it allows
+ to quantify changes.
+ Scientific computing and computer visualization are the tools to “speak
+ the language”
+\end_layout
+
+\begin_layout Itemize
+Observations often play a pivotal role but numerical models are nowadays
+ a fundamental workbench for understanding ocean and climate processes.
+ 
+\size small
+\emph on
+Future generations of oceanographer and climate scientists must learn how
+ to manage simple conceptual mathematical model first, to appreciate the
+ complex results of the modern numerical models (Drijfhout et al., Ocean
+ Circulation and Climate, Chapter 11, 2013).
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Fluid dynamics
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout ColumnsTopAligned
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+8cm
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Fluid dynamics (or hydrodynamics) is a branch of applied mathematics and
+ engineering 
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+It deals with the features of a fluid and its interactions with structures
+ or obstacles (fixed or time-varying).
+ Fluid dynamics is the basic science for areonautics, car manufacturing
+ and all competitions dealing with speed (F1, sailing, swimming, ...)
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+It is strongly grounded in computational mechanics with complicated systems
+ of differential equations.
+ There is a major assumption: 
+\series bold
+the density of the fluid is constant
+\series default
+ and depends on the fluid itself.
+ It is a function of 
+\series bold
+pressure
+\series default
+ 
+\begin_inset Formula $\rho=\rho(p)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Pressure is a fundamental property in fluids.
+ It expresses the 
+\series bold
+force exerted by a volume of fluid on the surrounding, per unit of area
+\series default
+.
+ If pressure forces are not balanced, we will have motion
+\end_layout
+
+\begin_layout Column
+6cm
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ../figures/M1/MP-02.jpg
+	lyxscale 50
+	width 6cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ../figures/M1/MP-03.jpg
+	lyxscale 50
+	width 6cm
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Geophysical fluid dynamics
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout ColumnsTopAligned
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+7cm
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Natural fluids like the atmosphere and seawater are also driven by pressure
+ forces, but most of the energy has a thermal origin and not mechanical.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+An atmosphere where pressure is the only driver would be a motionless and
+ stable system.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+In a fluid where 
+\begin_inset Formula $\rho=\rho(p,T,\ldots)$
+\end_inset
+
+ there can be heating of bottom layers from the Sun that generates movement
+ called 
+\series bold
+convection
+\series default
+: thermal energy is converted to kinetic energy.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+The motion of the fluid particles are then affected by the
+\series bold
+ Earth's rotation 
+\series default
+through the Coriolis force
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Ocean and atmosphere are described by 
+\series bold
+geophysical fluid dynamics (GFD)
+\end_layout
+
+\begin_layout Column
+6cm
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ../figures/M1/MP-04.jpg
+	lyxscale 50
+	width 6cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ../figures/M1/MP-05.jpg
+	lyxscale 50
+	width 6cm
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+An example of GFD at work: wild fire in the Cape Peninsula (March 2015)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename ../figures/M1/capetown_fire_sat.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+What governs the motion: advection-diffusion-reaction equation
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Example
+The dynamics of a tracer in the ocean or in the air, like the concentration
+ of pollutants at a river mouth or smoke from a fire are described through
+ dynamical Partial Differential equations (PDE) 
+\begin_inset Formula 
+\[
+\frac{\partial\psi\left(\mathbf{x},t\right)}{\partial t}=A\left(\mathbf{x},t\right)+D\left(\mathbf{x},t\right)+R\left(\mathbf{x},t\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ColumnsTopAligned
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+8cm
+\end_layout
+
+\begin_layout Itemize
+We will derive this equation from first principles of energy and mass conservati
+on.
+ The one-dimensional form is written as
+\begin_inset Formula 
+\[
+\frac{\partial\psi}{\partial t}=-u\frac{\partial\psi}{\partial x}+\frac{\partial}{\partial x}\left(D\frac{\partial\psi}{\partial x}\right)+R\left\{ \frac{d\psi}{dt}\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+4cm
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ../figures/M1/PDE_tracer_ADR.png
+	lyxscale 30
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+The basic equations of geophysical fluid dynamics
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout ColumnsCenterAligned
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+6cm
+\end_layout
+
+\begin_layout Itemize
+The 
+\series bold
+Navier-Stokes equations
+\series default
+ are the 
+\series bold
+primitive
+\series default
+ equations of GFD
+\end_layout
+
+\begin_layout Itemize
+They describe the conservation of mass and momentum for an infinitesimal
+ water parcel in the water, which is treated as a 
+\emph on
+continuum
+\emph default
+.
+ They derive strictly from Newton's laws.
+\end_layout
+
+\begin_layout Itemize
+Cannot be solved analytically (one of the Millenium problems, worth $1M)
+\end_layout
+
+\begin_layout Column
+6cm
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ../figures/M1/N-S_millenium.png
+	lyxscale 30
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Laboratory experiments in geophysical fluid dynamics
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout ColumnsCenterAligned
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+7cm
+\end_layout
+
+\begin_layout Itemize
+Most of the geophysical fluid dynamics processes are scalable, which means
+ that certain equilibria that are observed at planetary scales can be reproduced
+ in an appropriate laboratory setup
+\end_layout
+
+\begin_layout Itemize
+These experiments can be done using a rotating tank, to simulate the rotation
+ of the Earth
+\end_layout
+
+\begin_layout Itemize
+The biggest turntable in the world is at 
+\bar under
+
+\begin_inset CommandInset href
+LatexCommand href
+name "LEGI"
+target "http://www.legi.grenoble-inp.fr/web/spip.php?article757&lang=en"
+literal "false"
+
+\end_inset
+
+
+\bar default
+, in Grenoble (in French, check the 3D virtual tour)
+\end_layout
+
+\begin_layout Column
+6cm
+\end_layout
+
+\end_deeper
+\begin_layout ColumnsCenterAligned
+
+\end_layout
+
+\begin_layout ColumnsCenterAligned
+\begin_inset Graphics
+	filename ../figures/M1/Turntable_Cart.jpg
+	lyxscale 30
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Linear algebra: a primer
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Scalars, vectors and matrices
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definitions
+
+\size small
+A 
+\series bold
+scalar
+\series default
+ is a single number (or a bunch of), usually indicated with a latin or greek
+ symbol 
+\begin_inset Formula $a$
+\end_inset
+
+, 
+\begin_inset Formula $\phi$
+\end_inset
+
+.
+ A 
+\series bold
+vector
+\series default
+ is an 
+\series bold
+ordered
+\series default
+ row or column of numbers, usually indicated with a letter and an arrow
+ 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+, a bold lowercase letter 
+\begin_inset Formula $\boldsymbol{a}$
+\end_inset
+
+, or a letter with one index 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+.
+ A 
+\series bold
+matrix
+\series default
+ is a bundle of scalars or vectors; it can be a flat combination of rows
+ and columns (a 2-D matrix, indicated with a bold capital letter 
+\series bold
+
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+
+\series default
+ or with a letter and 2 indices 
+\begin_inset Formula $a_{ij}$
+\end_inset
+
+) or a multidimensional 
+\series bold
+array
+\series default
+ (a vector is a 1-D array; 3-D arrays are indicated with multiple indices
+ 
+\begin_inset Formula $a_{ijk}$
+\end_inset
+
+, and so on)
+\end_layout
+
+\begin_layout Itemize
+
+\size small
+This is the simple algebraic definition, but what really matters is what
+ every entity represents in a physical sense
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size small
+a scalar is a quantity identifiable only with 
+\series bold
+magnitude
+\series default
+ (e.g.
+ temperature, pressure, nutrient concentration, etc.)
+\end_layout
+
+\begin_layout Itemize
+
+\size small
+a vector carries information on 
+\series bold
+both direction and magnitude
+\series default
+ (e.g.
+ winds or currents)
+\end_layout
+
+\begin_layout Itemize
+
+\size small
+a matrix (also called a tensor) provides information in a 
+\series bold
+multi-dimensional space
+\series default
+ (the term space should be considered in an abstract way)
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Scalars in ocean and atmosphere sciences
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The typical scalars are temperature, pressure, humidity, irradiance, precipitati
+on, salinity, nutrient concentrations, abundances of organisms, etc.
+ 
+\series bold
+Scalars may be constants, but also functions.
+\end_layout
+
+\begin_layout Itemize
+Scalars can be 
+\series bold
+scalar fields
+\series default
+, maps of values at certain locations and time: 
+\begin_inset Formula $T(x,y,z,t)$
+\end_inset
+
+ 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ 
+\series bold
+multidimensional arrays
+\end_layout
+
+\begin_layout Itemize
+Scalar fields are usually represented with lines in the 1-D space and contour
+ lines or shading in the 2-D space
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+a 
+\series bold
+timeseries
+\series default
+ is the time evolution of the scalar value at a fixed position, 
+\begin_inset Formula $T(x_{0},y_{0},z_{0},t)=f\left(t\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+a 
+\series bold
+profile
+\series default
+ shows the variation in the vertical dimension 
+\begin_inset Formula $T(x_{0},y_{0},z,t_{0})=f\left(z\right)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+horizontal slices at a given time 
+\begin_inset Formula $T(x,y,z_{0},t_{0})=f\left(x,y\right)$
+\end_inset
+
+ are called 
+\series bold
+maps
+\series default
+ and vertical slices 
+\begin_inset Formula $T(x,y_{0},z,t_{0})$
+\end_inset
+
+ or 
+\begin_inset Formula $T(x_{0},y,z,t_{0})$
+\end_inset
+
+ are called 
+\series bold
+sections 
+\series default
+(zonal and meridional, respectively)
+\end_layout
+
+\begin_layout Itemize
+the combination of time and space coordinates gives a special map called
+ H
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+"o
+\end_layout
+
+\end_inset
+
+vm
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+"o
+\end_layout
+
+\end_inset
+
+ller plot (originally only referred to 
+\begin_inset Formula $T(x,y_{0},z_{0},t)$
+\end_inset
+
+ or 
+\begin_inset Formula $T(x_{0},y,z_{0},t)$
+\end_inset
+
+)
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Examples of scalar physical fields (profiles)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout ColumnsTopAligned
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+9cm
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ../figures/M1/Profiles_WOA13_ODV.png
+	lyxscale 30
+	width 9cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+4cm
+\end_layout
+
+\begin_layout Itemize
+Depth profiles at various points in the world ocean from the World Ocean
+ Atlas (WOA13) gridded dataset
+\end_layout
+
+\begin_layout Itemize
+Produced with Ocean Data View
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Examples of scalar physical fields (maps)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout ColumnsTopAligned
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+9cm
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ../figures/M1/Temperature_maps_WOA13_ODV.png
+	lyxscale 30
+	width 9cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+5cm
+\end_layout
+
+\begin_layout Itemize
+Temperature maps at various depth from the World Ocean Atlas (WOA13) gridded
+ dataset
+\end_layout
+
+\begin_layout Itemize
+The first 4 graphs are slices at standard depths; the last one is an isosurface
+ at the bottom
+\end_layout
+
+\begin_layout Itemize
+Produced with Ocean Data View
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Examples of scalar biogeochemical fields (maps)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout ColumnsTopAligned
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+7cm
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.5cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename ../figures/M1/Oxygen_map_WOA9_python.png
+	lyxscale 20
+	width 7cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ../figures/M1/Phosphate_map_WOA9_python.png
+	lyxscale 20
+	width 7cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+6cm
+\end_layout
+
+\begin_layout Itemize
+Surface mean annual concentrations of oxygen and phosphate from the World
+ Ocean Atlas (WOA13) gridded dataset
+\end_layout
+
+\begin_layout Itemize
+This is a contour filled plot.
+ The colormap is discrete and it is possible to appreciate the values
+\end_layout
+
+\begin_layout Itemize
+Produced with python 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Examples of scalar fields (sections)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout ColumnsTopAligned
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+9cm
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ../figures/M1/Sections_WOA13_ODV.png
+	lyxscale 30
+	width 9cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+3.5cm
+\end_layout
+
+\begin_layout Itemize
+Temperature, Nitrate and oxygen concentration in the Atlantic from the World
+ Ocean Atlas (WOA13) gridded dataset
+\end_layout
+
+\begin_layout Itemize
+Produced with Ocean Data View
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+The H
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+"o
+\end_layout
+
+\end_inset
+
+vm
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+"o
+\end_layout
+
+\end_inset
+
+ller plot
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename ../figures/M1/Hoevmoeller_PELAGOS_matlab.eps
+	width 9cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Iron concentration at surface and in the Equatorial Undercurrent (EUC) in
+ the Pacific Ocean at the equator.
+ The slope of the stripes indicate the speed of the EUC that carries Fe
+ to the Eastern Pacific.
+\end_layout
+
+\begin_layout Itemize
+Produced with Matlab/Matlab
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Vectors
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Vectors in ocean and atmosphere science
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The typical vector fields are wind or current velocities.
+ They are expressed in terms of components along the 3 spatial dimensions:
+ 
+\begin_inset Formula $\vec{U}=\mathbf{U}=\left(u,v,w\right)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Operations on vectors and scalars (see next lecture notes) may lead to the
+ following 
+\series bold
+space operators
+\series default
+:
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Some derived quantities from scalar fields are also vectors: 
+\series bold
+the gradient
+\series default
+ (the pressure gradient)
+\end_layout
+
+\begin_layout Itemize
+Some derived quantities from vector fields are scalars: 
+\series bold
+the divergence 
+\series default
+(the fluid divergence)
+\end_layout
+
+\begin_layout Itemize
+Some derived quantities from vector fields are vectors: 
+\series bold
+the curl 
+\series default
+(the wind stress curl)
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Examples of oceanic vector fields
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout ColumnsTopAligned
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+8cm
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ../figures/M1/vector_noagulhas.png
+	lyxscale 50
+	width 8cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+4cm
+\end_layout
+
+\begin_layout Itemize
+Simulated SST (scalar field) with surface current vectors overlaid for (a)
+ a model experiment in which the effect of the Agulhas has been removed
+ and (b) for the 'realistic' case
+\end_layout
+
+\begin_layout Itemize
+From J.
+ Veitch's PhD thesis (done with Matlab)
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Atmospheric fields: wind stress
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Graphics
+	filename ../figures/M1/MP_10_02_wstress.jpg
+	lyxscale 50
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Wind stress intensity (scalar) and wind vectors (Marshall and Plumb, Fig.
+ 10.2)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Vectors in maths
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Practical: Chapter 4, C.
+ Moler, Experiments with Matlab, http://www.mathworks.com/moler/exm, free
+ e-book
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+Linear algebra
+\series default
+ is the branch of mathematics that deals with vectors and matrices 
+\end_layout
+
+\begin_layout ColumnsTopAligned
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+8cm
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+The most simple example of a vector is expressed by the coordinates of a
+ point on the Cartesian plane.
+ The point is indicated by a column vector with 2 components (or elements),
+ one for each coordinate.
+ They are grouped with brackets.
+ It is customary to indicate a point with 
+\begin_inset Formula $\left(\right)$
+\end_inset
+
+, and the components of a vector with 
+\begin_inset Formula $\left\langle \right\rangle $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Note that there is no limit to the number of components.
+ Vectors in physics are intuitively linked to spatial (+ time) dimensions
+ but they have to be thought as abstract data structures very useful for
+ scientific computing (called
+\series bold
+ ARRAYS
+\series default
+)
+\end_layout
+
+\begin_layout Column
+6cm
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\begin_inset Formula 
+\[
+x_{i}=\mathbf{x}=\begin{pmatrix}x_{1}\\
+x_{2}
+\end{pmatrix}=\begin{bmatrix}x_{1}\\
+x_{2}
+\end{bmatrix}=\left\langle \begin{array}{c}
+x_{1}\\
+x_{2}
+\end{array}\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\begin_inset Formula 
+\[
+v_{i}=\begin{pmatrix}v_{1}\\
+v_{2}\\
+v_{3}\\
+\vdots\\
+v_{n}
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Vector components
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout ColumnsTopAligned
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+7cm
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ../figures/M1/MP-5_20_zonal_winds.jpg
+	lyxscale 50
+	scale 45
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+5cm
+\end_layout
+
+\begin_layout Itemize
+Important consideration: 
+\bar under
+the components of a vector are scalars
+\end_layout
+
+\begin_layout Itemize
+Annual 
+\series bold
+zonal
+\series default
+ mean of the 
+\series bold
+wind zonal component
+\series default
+ as a function of height.
+ The two mid-latitude jet streams are visible, as well as the major structures
+ of Easterlies and Westerlies in the lower troposphere
+\end_layout
+
+\begin_layout Itemize
+From Marshall and Plumb (Fig.
+ 5.20)
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Vectors in the 3-dimensional space
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout ColumnsTopAligned
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+8cm
+\end_layout
+
+\begin_layout Itemize
+
+\size small
+A point in the 3-dimensional Cartesian space is a
+\series bold
+ positional vector
+\series default
+: in the example on the right, the vector 
+\begin_inset Formula $\boldsymbol{a}$
+\end_inset
+
+ connects the origin of the system to the point (the tip of the arrow).
+ It will have 3 components, the values of the coordinates along the 
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\begin_inset Formula $y$
+\end_inset
+
+ and 
+\begin_inset Formula $z$
+\end_inset
+
+ axes
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\size small
+The Cartesian axes are vectors themselves
+\series default
+: unit vectors or direction vectors
+\end_layout
+
+\begin_layout Itemize
+
+\size small
+A vector in space is uniquely determined by an origin (the tail), and a
+ triplet of components (that locate the tip).
+ They must be referenced to a system of coordinates which is itself a triplet
+ of unit vectors 
+\end_layout
+
+\begin_layout Itemize
+
+\size small
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://www.intmath.com/vectors/3d-space-interactive-applet.php
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+5.5cm
+\end_layout
+
+\end_deeper
+\begin_layout ColumnsTopAligned
+\begin_inset Graphics
+	filename ../figures/M1/3D_Vector_versor.png
+	lyxscale 50
+	scale 30
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Every point is a vector: 
+\end_layout
+
+\begin_layout ColumnsTopAligned
+\begin_inset Formula $\vec{a}=\mathbf{a}=\left(a_{1},a_{2},a_{3}\right)=\left(a_{x},a_{y},a_{z}\right)\Rightarrow a_{x}\mathbf{\hat{i}}+a_{y}\mathbf{\hat{j}}+a_{z}\mathbf{\hat{k}}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Vector sign, addition, and subtraction
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The negative of a vector has the same magnitude but negative components
+\end_layout
+
+\begin_layout Itemize
+The sum of 2 vectors is the sum of the elements and 
+\series bold
+the result is a vector
+\series default
+
+\begin_inset Formula 
+\[
+\mathbf{x}+\mathbf{y}=\begin{bmatrix}x_{1} & x_{2} & x_{3}\end{bmatrix}+\begin{bmatrix}y_{1} & y_{2} & y_{3}\end{bmatrix}=\begin{bmatrix}x_{1}+y_{1} & x_{2}+y_{2} & x_{3}+y_{3}\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+It is geometrically interpreted as the 
+\emph on
+parallelogram
+\emph default
+ combination of the two vectors when connected by the tails
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename ../figures/M1/ParallelogramLaw.gif
+	scale 40
+
+\end_inset
+
+
+\series bold
+
+\begin_inset Newline newline
+\end_inset
+
+
+\size footnotesize
+Questions
+\series default
+ (check the resources on Vula for the answers): 1) What happens if the two
+ vectors are on a straight angle? 2) How do you compute the difference?
+ 3) And if you multiply the vector by a scalar?
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Matrices
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Matrices in math
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[remember picture,overlay]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node at (2,-3) {
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename ../figures/M1/Matrix_3x4.gif
+	scale 30
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+A matrix is an 
+\series bold
+ordered arrangement
+\series default
+ of row and column vectors
+\end_layout
+
+\begin_layout Itemize
+An 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ matrix consists of 
+\begin_inset Formula $m$
+\end_inset
+
+ rows and 
+\begin_inset Formula $n$
+\end_inset
+
+ columns (counting from the upper left corner)
+\end_layout
+
+\begin_layout Itemize
+Any element of the matrix is identified with a pair of indices corresponding
+ to the row and column numbers
+\begin_inset Formula 
+\[
+\mathbf{A}=A_{ij}=\begin{bmatrix}a_{11} & a_{12} & a_{13}\\
+a_{21} & a_{22} & a_{23}\\
+a_{31} & a_{32} & a_{33}
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+A matrix is called 
+\series bold
+square
+\series default
+ when the number of rows equals the number of columns
+\end_layout
+
+\begin_layout Itemize
+
+\size small
+There can be 0s in a matrix (if all, it's the zero matrix).
+ A matrix with all 0s except on the diagonal is a 
+\series bold
+diagonal matrix
+\series default
+ (it's a square matrix!).
+ 
+\begin_inset Formula 
+\[
+\begin{bmatrix}a_{11} & 0 & 0\\
+0 & a_{22} & 0\\
+0 & 0 & a_{33}
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+The identity matrix
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size footnotesize
+The 
+\series bold
+identity matrix
+\series default
+ 
+\begin_inset Formula $I$
+\end_inset
+
+ is the equivalent of 
+\begin_inset Quotes eld
+\end_inset
+
+1
+\begin_inset Quotes erd
+\end_inset
+
+ in algebra.
+ It is a diagonal matrix with 1s on the diagonal and it can be of any dimension
+\begin_inset Formula 
+\begin{equation}
+\mathbf{I}=\begin{bmatrix}1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{bmatrix}\label{eq:identity-matrix}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+In the 3-D space, the identity matrix 
+\series bold
+identifies the Cartesian system of coordinates
+\series default
+, because each row or column represents the unit vector for each direction
+ (called 
+\emph on
+bases
+\emph default
+)
+\begin_inset Formula 
+\[
+\mathbf{\hat{i}}=\begin{bmatrix}1\\
+0\\
+0
+\end{bmatrix};\ \mathbf{\hat{j}}=\begin{bmatrix}0\\
+1\\
+0
+\end{bmatrix};\ \mathbf{\hat{k}}=\begin{bmatrix}0\\
+0\\
+1
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ColumnsCenterAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+10cm
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+This matrix has a lot of interesting properties: it is 
+\emph on
+orthogonal
+\emph default
+ because all the vectors are at right angles to each other, and all vectors
+ are of length (
+\emph on
+magnitude or norm
+\emph default
+) 1: 
+\begin_inset Formula $\left\Vert \mathbf{\hat{i}}\right\Vert =\sqrt{1^{2}+0^{2}+0^{2}}=1$
+\end_inset
+
+.
+ All systems of coordinates must be 
+\emph on
+ortho-normal
+\emph default
+.
+ It is also the only matrix that does not change when it is 
+\emph on
+transposed
+\emph default
+, that is rows and columns are swapped 
+\begin_inset Formula $\mathbf{I}^{T}=\mathbf{I}$
+\end_inset
+
+ (
+\series bold
+note:
+\series default
+ the transpose of a matrix is not the inverse!)
+\end_layout
+
+\begin_layout Column
+4cm
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ../figures/M1/Unit-vectors-in-Cartesian-Coord.png
+	width 3cm
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Operations with vectors and matrices
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Arithmetic operators (sum and difference)q are applied quite naturally to
+ vectors/matrices, 
+\series bold
+provided that they are of the same size!
+\series default
+ The same for the multiplication by a scalar
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+In maths, there is usually no symbol for multiplication.
+ A central dot is sometimes used 
+\begin_inset Formula $s\cdot x_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+They are all performed element-by-element
+\begin_inset Formula 
+\begin{align*}
+\mathbf{x}+\mathbf{y} & =\begin{pmatrix}x_{1}\\
+x_{2}
+\end{pmatrix}+\begin{pmatrix}y_{1}\\
+y_{2}
+\end{pmatrix}=\begin{pmatrix}x_{1}+y_{1}\\
+x_{2}+y_{2}
+\end{pmatrix}\\
+\mathbf{A}-\mathbf{B} & =\begin{bmatrix}a_{11} & a_{12}\\
+a_{21} & a_{22}
+\end{bmatrix}-\begin{bmatrix}b_{11} & b_{12}\\
+b_{21} & b_{22}
+\end{bmatrix}=\begin{bmatrix}a_{11}-b_{11} & a_{12}-b_{12}\\
+a_{21}-b_{21} & a_{22}-b_{22}
+\end{bmatrix}\\
+s\mathbf{x} & =\begin{pmatrix}sx_{1}\\
+sx_{2}
+\end{pmatrix}\\
+k\mathbf{A} & =\begin{bmatrix}ka_{11} & ka_{12}\\
+ka_{21} & ka_{22}
+\end{bmatrix}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Matrix multiplication (I)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\emph on
+If you are unfamiliar with matrices, do the Kahn Academy section first!
+\emph default
+ One way to understand matrix multiplication is to think of systems of coordinat
+es 
+\end_layout
+
+\begin_layout Itemize
+Any number can be seen as the product of itself by 1, as well as any vector
+ in the 3-D system can be seen as the matrix product of itself by the identity
+ matrix.
+ This operation is called the 
+\series bold
+scalar product
+\series default
+ (or dot product) between vectors of the same size.
+\begin_inset Formula 
+\[
+\mathbf{a}=\mathbf{Ia=}\begin{bmatrix}1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{bmatrix}\cdot\begin{bmatrix}a_{1}\\
+a_{2}\\
+a_{3}
+\end{bmatrix}=\mathbf{aI}=\begin{bmatrix}a_{1} & a_{2} & a_{3}\end{bmatrix}\cdot\begin{bmatrix}1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{bmatrix}=\begin{bmatrix}a_{1}\\
+a_{2}\\
+a_{3}
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size small
+The rule for multiplication is straightforward: it is a 
+\series bold
+row-by-column
+\series default
+ element-by-element product, with the sum of the elements.
+ The geometric interpretation is that we 
+\emph on
+project
+\emph default
+ the vector on each of the axes and obtain the components
+\size default
+
+\begin_inset Formula 
+\[
+\begin{bmatrix}1\cdot a_{1}+0\cdot a_{2}+0\cdot a_{3}\\
+0\cdot a_{1}+1\cdot a_{2}+0\cdot a_{3}\\
+0\cdot a_{1}+0\cdot a_{2}+1\cdot a_{3}
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Matrix multiplication (II)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Matrix multiplication is not commutative: 
+\begin_inset Formula $\mathbf{AB}\neq\mathbf{BA}$
+\end_inset
+
+ (unless 
+\begin_inset Formula $\mathbf{I}$
+\end_inset
+
+ is involved)
+\end_layout
+
+\begin_layout Itemize
+It works both for square and rectangular matrices but the number of columns
+ of the left matrix must be equal to the number of rows of the second matrix
+ (
+\emph on
+conformable
+\emph default
+ matrices).
+ Inner dimensions must coincide: 
+\begin_inset Formula $\left(m\times n\right)\cdot\left(i\times j\right)$
+\end_inset
+
+ gives a matrix 
+\begin_inset Formula $m\times j$
+\end_inset
+
+ only if 
+\begin_inset Formula $n=i$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+It is not limited to 2-D matrices but it is generalized to n-dimensions:
+ 
+\emph on
+inner dimensions must always be equal to be able to multiply
+\end_layout
+
+\begin_layout Itemize
+Scientific software are specialized to deal with arrays.
+ Matrix manipulation is not anymore tedious as it used to be
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Operations with vectors and matrices
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Why vector operations are important in upwelling regions?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Graphics
+	filename ../figures/M1/Locations-of-significant-coastal-upwelling-regions-in-the-world-ocean.png
+	lyxscale 50
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Upwelling regions in the world ocean.
+ (Kaempf and Chapman, 2016, The Functioning of Coastal Upwelling Systems,
+ DOI: 10.1007/978-3-319-42524-5_2, In: Upwelling Systems of the World)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Examples of using scalar products in oceanography
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout ColumnsTopAligned
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+8.5cm
+\end_layout
+
+\begin_layout Itemize
+
+\size small
+Longshore currents: most waves arrive at the shoreline with an angle even
+ if there is refraction.
+ The component of the velocity parallel to the coast obtained with the scalar
+ product is the resulting longshore (residual) current.
+ The combination of residual currents creates the dangerous rip currents.
+\end_layout
+
+\begin_layout Itemize
+
+\size small
+Ekman-driven coastal upwelling: most of the winds incident on coastlines
+ can generate upwelling.
+ There is always a wind component along-shore.
+ However, the eastern boundary upwelling regions 
+\series bold
+are more effective because the scalar product
+\series default
+ between the equatorward wind vectors and coastal geometry 
+\series bold
+is the largest
+\end_layout
+
+\begin_layout Column
+6cm
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ../figures/M1/longshore_current.gif
+	lyxscale 50
+	width 6cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ../figures/M1/longshore_wind.jpg
+	lyxscale 50
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+The dot product (aka scalar or inner product)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The 
+\series bold
+dot product
+\series default
+ of 2 vectors 
+\series bold
+is a scalar
+\series default
+
+\begin_inset Formula 
+\[
+\mathbf{x}\cdot\mathbf{y}=\begin{bmatrix}x_{1} & x_{2} & x_{3}\end{bmatrix}\cdot\begin{bmatrix}y_{1}\\
+y_{2}\\
+y_{3}
+\end{bmatrix}=x_{1}y_{1}+x_{2}y_{2}+x_{3}y_{3}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+It is 
+\bar under
+commutative
+\bar default
+ 
+\begin_inset Formula $\mathbf{x}\cdot\mathbf{y}=\mathbf{y}\cdot\mathbf{x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+If one of the vectors is of magnitude 1 (like the unit vectors), it is geometric
+ally interpreted as the length of the 
+\emph on
+projection
+\emph default
+ of one on the other when the two vectors are connected by the tails
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename ../figures/M1/DotProduct.gif
+	scale 40
+
+\end_inset
+
+The magnitude is 
+\begin_inset Formula $\mathbf{x}\cdot\mathbf{y}=\left\Vert \mathbf{x}\right\Vert \ \left\Vert \mathbf{y}\right\Vert \cos\theta$
+\end_inset
+
+ 
+\series bold
+
+\begin_inset Newline newline
+\end_inset
+
+Question: 
+\series default
+\emph on
+What happens if the two vectors are orthogonal?
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+The cross product (vector product)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "frame:cross-product"
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size footnotesize
+The 
+\series bold
+cross product
+\series default
+ of two vectors is 
+\bar under
+not commutative
+\bar default
+ and 
+\series bold
+the result is a vector
+\series default
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\size footnotesize
+perpendicular to the plane on which the vectors lay 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename ../figures/M1/CrossProduct.gif
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\size footnotesize
+the magnitude is 
+\begin_inset Formula $\mathbf{u}\times\mathbf{v}=\left\Vert \mathbf{u}\right\Vert \ \left\Vert \mathbf{v}\right\Vert \sin\theta$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+\size footnotesize
+the direction follows the right hand rule
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\size footnotesize
+The geometric interpretation is less obvious, but it can be thought as the
+ area of the parallelogram between the vectors 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://www.geogebra.org/m/eJHkAES2
+\end_layout
+
+\end_inset
+
+.
+ 
+\series bold
+What happens if the two vectors are orthogonal? 
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Deriving the components is a bit tricky.
+ It's the 
+\emph on
+determinant
+\emph default
+ of a special matrix in which the rows are the unit vectors and the multipliers,
+ which can be done with the 
+\emph on
+
+\begin_inset CommandInset href
+LatexCommand href
+name "rule of Sarrus"
+target "https://en.wikipedia.org/wiki/Rule_of_Sarrus#:~:text=Rule%20of%20Sarrus%3A%20The%20determinant,along%20the%20up%2Dright%20diagonals."
+literal "false"
+
+\end_inset
+
+
+\size default
+\emph default
+
+\begin_inset Formula 
+\[
+\!\!\!\mathbf{u\times}\mathbf{v}=\begin{vmatrix}\mathbf{\hat{i}} & \mathbf{\hat{j}} & \mathbf{\hat{k}}\\
+u_{x} & u_{y} & u_{z}\\
+v_{x} & v_{y} & v_{z}
+\end{vmatrix}=\left(u_{y}v_{z}-u_{z}v_{y}\right)\mathbf{\hat{i}}-\left(u_{x}v_{z}-u_{z}v_{x}\right)\mathbf{\hat{j}}+\left(u_{x}v_{y}-u_{y}v_{x}\right)\mathbf{\hat{k}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Example of vector products: angular momentum
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Angular momentum in physics is a measure of the amount of rotation of an
+ object.
+ It is the rotational analogue of linear momentum (velocity times mass,
+ 
+\begin_inset Formula $\vec{p}=m\vec{V}$
+\end_inset
+
+) but in this case it is referenced to an origin (the axis/centre of rotation)
+\begin_inset Formula 
+\[
+\vec{L}=\vec{r}\times m\vec{V}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ColumnsTopAligned
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+8cm
+\end_layout
+
+\begin_layout Itemize
+
+\size small
+Angular momentum is a vector that identifies the plane of rotation and the
+ quantity of motion
+\end_layout
+
+\begin_layout Itemize
+
+\size small
+In fact, it is oriented as the angular velocity 
+\begin_inset Formula $\frac{d\theta}{dt}=\vec{\omega}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\size small
+It can be demonstrated by first thinking about linear velocity 
+\begin_inset Formula $\vec{V}=\vec{\omega}\times\vec{r}$
+\end_inset
+
+ and computing the triple vector product (see slide 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "frame:useful"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Column
+6cm
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ../figures/M1/angular_momentum.png
+	width 5cm
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Conservation of angular momentum
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+In the absence of external forces (torque), 
+\series bold
+angular momentum is conserved
+\series default
+.
+ This is a basic principle for ocean and atmosphere dynamics on a rotating
+ Earth.
+ Geophysical fluids conserve their initial angular momentum given by the
+ Earth rotation at their location if there are no external forces in action
+\end_layout
+
+\begin_layout ColumnsTopAligned
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+6cm
+\end_layout
+
+\begin_layout Itemize
+The typical example of angular momentum and conservation is given by a spinning
+ figure skater: when the arms are contracted the spin velocity increases
+\end_layout
+
+\begin_layout Column
+6cm
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ../figures/M1/skater.jpg
+	lyxscale 50
+	width 4cm
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Useful relationships
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "frame:useful"
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+spend some time to demonstrate them
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{\hat{i}}\cdot\mathbf{\hat{i}}=1;\ \mathbf{\hat{j}}\cdot\mathbf{\hat{j}}=1;\ \mathbf{\hat{k}}\cdot\mathbf{\hat{k}}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{\hat{i}}\cdot\mathbf{\hat{j}}=0;\ \mathbf{\hat{j}}\cdot\mathbf{\hat{k}}=0;\ \mathbf{\hat{i}}\cdot\mathbf{\hat{k}}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{\hat{i}}\times\mathbf{\hat{j}}=\mathbf{\hat{k}};\ \mathbf{\hat{j}}\times\mathbf{\hat{k}}=\mathbf{\hat{i}};\ \mathbf{\hat{i}}\times\mathbf{\hat{k}}=-\mathbf{\hat{j}}$
+\end_inset
+
+ (1-3 demonstrate that the bases in the identity matrix are orthonormal)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{a}\times\mathbf{a}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{a}\times\mathbf{b}=-\mathbf{b}\times\mathbf{a}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{a}\cdot\left(\mathbf{a}\times\mathbf{b}\right)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Triple scalar product: 
+\begin_inset Formula $\mathbf{a}\cdot\left(\mathbf{b}\times\mathbf{c}\right)=\mathbf{b}\cdot\left(\mathbf{c}\times\mathbf{a}\right)=\mathbf{c}\cdot\left(\mathbf{a}\times\mathbf{b}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Triple vector product: 
+\begin_inset Formula $\mathbf{a}\times\left(\mathbf{b}\times\mathbf{c}\right)=\mathbf{b}\mathbf{\left(a\cdot\mathbf{c}\right)-}\mathbf{c}\mathbf{\left(a\cdot\mathbf{b}\right)}$
+\end_inset
+
+ 
+\emph on
+(mnemonic: BAC-CAB.
+ This relationship is used to demonstrate that angular momentum is oriented
+ as angular velocity)
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Working with matrices: linear transformations
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+A linear transformation is a relationship that satisfies the following rules
+\begin_inset Formula 
+\begin{align*}
+F\left(x+y\right) & =F\left(x\right)+F\left(y\right)\\
+F\left(cx\right) & =cF\left(x\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Vector-matrix multiplication in the 2-D plane is equivalent to a change
+ of coordinates.
+ This is a linear transformation
+\end_layout
+
+\begin_layout Itemize
+A 
+\series bold
+symmetrical reflection
+\series default
+ (along a point or axis) and 
+\series bold
+stretching
+\series default
+ are linear matrix transformation on the plane 
+\emph on
+(this is exactly what powerpoint or photoshop do when you flip or stretch
+ an object or a picture)
+\end_layout
+
+\begin_layout Itemize
+A 
+\series bold
+rotation
+\series default
+ is also a linear transformation involving a vector-matrix product
+\end_layout
+
+\begin_layout Itemize
+Learn more about matrix transformations here 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://www.khanacademy.org/math/linear-algebra/matrix_transformations
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+fragile
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Example 1.5.1 - Stretching plane figures
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size footnotesize
+Through the vector-matrix product it is possible to flip and stretch an
+ object 
+\emph on
+(Note: a shift is simply the addition of constants to the coordinates)
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+An ordered array is also called an 
+\series bold
+n-tuple
+\series default
+.
+ A figure on the plane can be seen as a set of pairs or 2-tuples 
+\emph on
+(Note: to graphically 
+\begin_inset Quotes eld
+\end_inset
+
+connect the dots
+\begin_inset Quotes erd
+\end_inset
+
+ and close a polygon we need to connect the last point with the first point,
+ hence we repeat the pair).
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+\emph on
+Try these lines of code on Matlab (the figure will not look identical):
+\emph default
+ 
+\end_layout
+
+\begin_layout ColumnsTopAligned
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+7cm
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Matlab,basicstyle={\scriptsize},breaklines=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+>> figure
+\end_layout
+
+\begin_layout Plain Layout
+
+>> triangle=[1 3 1 1; 3 3 -1 3]
+\end_layout
+
+\begin_layout Plain Layout
+
+triangle =
+\end_layout
+
+\begin_layout Plain Layout
+
+     1     3     1     1
+\end_layout
+
+\begin_layout Plain Layout
+
+     3     3    -1     3
+\end_layout
+
+\begin_layout Plain Layout
+
+>> line(triangle(1,:),triangle(2,:))
+\end_layout
+
+\begin_layout Plain Layout
+
+>> axis([-8 8 -8 8])
+\end_layout
+
+\begin_layout Plain Layout
+
+>> set(gca,'xtick',-8:8,'ytick',-8:8)
+\end_layout
+
+\begin_layout Plain Layout
+
+>> grid on
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+6.5cm
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ../figures/M1/triangle.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Linear transformation of coordinates (I)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Let's assume we are looking for a function 
+\begin_inset Formula $t$
+\end_inset
+
+ that changes any object on the Cartesian plane to another one that is flipped
+ with respect to the y-axis and it's magnified 2 times along the 
+\begin_inset Formula $y$
+\end_inset
+
+ direction.
+ 
+\end_layout
+
+\begin_layout Itemize
+This is equivalent to changing the sign of the coordinate 
+\begin_inset Formula $x$
+\end_inset
+
+ and doubling the coordinate 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ 
+\emph on
+(Note: spend some time to think about it, and if you don't see it, go straight
+ to the code in the next slide and then come back to the math)
+\emph default
+
+\begin_inset Formula 
+\[
+t:\begin{bmatrix}x\\
+y
+\end{bmatrix}\mapsto\begin{bmatrix}-x\\
+2y
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+fragile
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Linear transformation of coordinates (II)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout ColumnsTopAligned
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+8.5cm
+\end_layout
+
+\begin_layout Itemize
+
+\size small
+To write the transformation matrix, we apply this function to the columns
+ of the identity matrix 
+\begin_inset Formula $I_{2}$
+\end_inset
+
+, i.e.
+ the base of our coordinate system.
+ 
+\emph on
+(Note: go back to eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:identity-matrix"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ in Section 1.4 if the relationship between the identity matrix and the coordinat
+e system is not clear)
+\emph default
+:
+\begin_inset Formula 
+\[
+\mathbf{T}=\left[t\left(\begin{bmatrix}1\\
+0
+\end{bmatrix}\right)\ t\left(\begin{bmatrix}0\\
+1
+\end{bmatrix}\right)\right]=\begin{bmatrix}-1 & 0\\
+0 & 2
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size small
+Thanks to the matrix 
+\begin_inset Formula $\mathbf{T}$
+\end_inset
+
+, every point of our triangle (i.e.
+ a vector on the 2D plane) can be transformed using a vector-matrix product
+\begin_inset Formula 
+\[
+t\left(\mathbf{x}\right)=\mathbf{Tx}=\begin{bmatrix}-1 & 0\\
+0 & 2
+\end{bmatrix}\cdot\begin{bmatrix}x\\
+y
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\size default
+ 
+\end_layout
+
+\begin_layout Column
+6.5cm
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ../figures/M1/triangle_T.png
+	width 5cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Matlab,basicstyle={\tiny},breaklines=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+>> T=[-1 0;0 2]
+\end_layout
+
+\begin_layout Plain Layout
+
+ T =
+\end_layout
+
+\begin_layout Plain Layout
+
+    -1     0
+\end_layout
+
+\begin_layout Plain Layout
+
+     0     2
+\end_layout
+
+\begin_layout Plain Layout
+
+>> tt=T*triangle
+\end_layout
+
+\begin_layout Plain Layout
+
+ tt =
+\end_layout
+
+\begin_layout Plain Layout
+
+    -1    -3    -1    -1
+\end_layout
+
+\begin_layout Plain Layout
+
+     6     6    -2     6
+\end_layout
+
+\begin_layout Plain Layout
+
+>> h=line(tt(1,:),tt(2,:),'color','r')
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Example 1.5.2 - Rotating vector objects
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout ColumnsTopAligned
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+9cm
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+The rotation by an angle 
+\begin_inset Formula $\theta$
+\end_inset
+
+ is also a 
+\emph on
+linear transformation
+\emph default
+ and can be expressed via vector-matrix products
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+As done for the previous case, we can derive the transformation matrix through
+ the transformation of the coordinate bases 
+\begin_inset Formula $I_{2}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mathbf{R_{\theta}}=\left[rot_{\theta}\left(\begin{bmatrix}1\\
+0
+\end{bmatrix}\right)\ rot_{\theta}\left(\begin{bmatrix}0\\
+1
+\end{bmatrix}\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+The resulting matrix can be obtained graphically using the trigonometric
+ functions 
+\emph on
+(Note, check the Kahn Academy video for the full derivation)
+\emph default
+.
+ This leads to the generic form of a rotation matrix
+\begin_inset Formula 
+\[
+\mathbf{R_{\theta}}=\begin{bmatrix}\cos\theta & -\sin\theta\\
+\sin\theta & \cos\theta
+\end{bmatrix}\ \textrm{and }\mathbf{v}'=\mathbf{R}_{\theta}\mathbf{v}_{0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+5cm
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ../figures/M1/RotationVector.gif
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ../figures/M1/TrigonometryUnitCircle.gif
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Example 1.5.3 - Working with matrices to solve linear systems
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout ColumnsTopAligned
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+7.5cm
+\end_layout
+
+\begin_layout Itemize
+You are a scientist studying marine mammals.
+ As part of your research, you need to tag a bottlenose dolphin with a GPS
+ tracker.
+ You are on a small boat at about 10 km from the coast.
+\end_layout
+
+\begin_layout Itemize
+Bottlenose dolphins are very rapid swimmers, with a speed up to 10 m/s.
+ This is unfortunately the maximum speed of your boat
+\end_layout
+
+\begin_layout Itemize
+The dolphin is currently swimming at 8 m/s and you need to wait 2 minutes
+ to calibrate the GPS before running
+\end_layout
+
+\begin_layout Column
+7cm
+\end_layout
+
+\end_deeper
+\begin_layout ColumnsTopAligned
+\begin_inset Graphics
+	filename ../figures/M1/Bottlenose_Dolphin.jpg
+	lyxscale 20
+	scale 7
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\series bold
+Will you be able to reach the dolphin before it gets too close to the coast?
+\series default
+ 
+\end_layout
+
+\begin_layout ColumnsTopAligned
+This problem is a typical 
+\emph on
+linear system of equations
+\emph default
+ and the solution is a matter of seconds with a computer
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Solving a linear system (I)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The problem can be written in the following terms
+\begin_inset Formula 
+\begin{align*}
+x & =V_{d}t\\
+x & =V_{b}\left(t-T_{gps}\right)
+\end{align*}
+
+\end_inset
+
+where 
+\begin_inset Formula $V_{d}$
+\end_inset
+
+ and 
+\begin_inset Formula $V_{b}$
+\end_inset
+
+ are the speeds of the dolphin and the boat (8 and 10 m/s, respectively).
+ 
+\begin_inset Formula $T_{gps}$
+\end_inset
+
+ is the time needed to set the GPS (2 min = 120 s) and 
+\begin_inset Formula $x,\ t$
+\end_inset
+
+ are the unknowns, the distance and the time of the encounter
+\end_layout
+
+\begin_layout Itemize
+One can solve this by substitution of variables as you learned at high school,
+ but linear algebra is much more effective.
+ The equations can be written in terms of vectors and one transformation
+ matrix:
+\begin_inset Formula 
+\[
+\begin{cases}
+x-V_{d}t & =0\\
+x-V_{b}t & =-V_{b}T_{gps}
+\end{cases}\Rightarrow\begin{bmatrix}1 & -V_{d}\\
+1 & -V_{b}
+\end{bmatrix}\cdot\begin{bmatrix}x\\
+t
+\end{bmatrix}=\begin{bmatrix}0\\
+-V_{b}T_{gps}
+\end{bmatrix}\Rightarrow\mathbf{Ax}=\mathbf{c}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+fragile
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Solving a linear system (II)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout ColumnsTopAligned
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+7cm
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+The solution of a linear system with linear algebra is very similar to solving
+ the equation 
+\begin_inset Formula $ax=c\Rightarrow x=\frac{1}{a}c=a^{-1}c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Is there such a thing like the inverse of a matrix? YES!
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+The solution of 
+\begin_inset Formula $\mathbf{Ax}=\mathbf{c}$
+\end_inset
+
+ is the matrix 
+\begin_inset Formula $\mathbf{B}$
+\end_inset
+
+ that satisfies 
+\begin_inset Formula $\mathbf{x}=\mathbf{Bc}$
+\end_inset
+
+, and this is the inverse of 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Column
+8cm
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+There is no need to know how to invert a matrix by hand.
+ Try this in Matlab
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Matlab,basicstyle={\tiny}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+>> A=[1 -8; 1 -10]
+\end_layout
+
+\begin_layout Plain Layout
+
+A =
+\end_layout
+
+\begin_layout Plain Layout
+
+     1    -8
+\end_layout
+
+\begin_layout Plain Layout
+
+     1   -10
+\end_layout
+
+\begin_layout Plain Layout
+
+>> c=[0; -120*10]
+\end_layout
+
+\begin_layout Plain Layout
+
+c =
+\end_layout
+
+\begin_layout Plain Layout
+
+           0
+\end_layout
+
+\begin_layout Plain Layout
+
+       -1200
+\end_layout
+
+\begin_layout Plain Layout
+
+>> B=inv(A)
+\end_layout
+
+\begin_layout Plain Layout
+
+B =
+\end_layout
+
+\begin_layout Plain Layout
+
+    5.0000   -4.0000
+\end_layout
+
+\begin_layout Plain Layout
+
+    0.5000   -0.5000
+\end_layout
+
+\begin_layout Plain Layout
+
+>> x=B*c
+\end_layout
+
+\begin_layout Plain Layout
+
+x =
+\end_layout
+
+\begin_layout Plain Layout
+
+        4800
+\end_layout
+
+\begin_layout Plain Layout
+
+         600
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Definition
+
+\size footnotesize
+The inverse of a matrix must satisfy the relationship 
+\begin_inset Formula $\mathbf{BA}=\mathbf{I}$
+\end_inset
+
+, i.e.
+ the product of a matrix by its inverse is equal to the identity matrix:
+ 
+\begin_inset Formula $\mathbf{A^{-1}A}=\mathbf{I}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
